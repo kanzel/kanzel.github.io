@@ -78,6 +78,7 @@ export function GitHubStats() {
   const githubUrl = (config.social as Record<string, string>)?.github ?? '';
   const { data, loading, error } = useGitHubStats(githubUrl);
 
+  console.log(`::githubUrl::${githubUrl}`);
   if (!githubUrl || githubUrl.includes('yourusername')) return null;
   if (!githubUrl || githubUrl.includes('kanzel')) return null;
   if (error === 'not-found') return null;
