@@ -68,7 +68,7 @@ sections:
   - { id: education,      show: true  }
   - { id: certifications, show: true  }
   - { id: publications,   show: false }
-  - { id: testimonials,   show: true  }
+  - { id: testimonials,   show: false }
   - { id: contact,        show: true  }
 
 # ── Social links ───────────────────────────── (leave blank to hide) ───
@@ -94,7 +94,7 @@ about: |
 # Optional fields: prefix (e.g. "$") and suffix (e.g. "+" or "k").
 # Remove all entries or set show: false above to hide this section.
 stats:
-  - { label: "Years Experience", value: 10,    suffix: "+" }
+  - { label: "Years Experience", value: 14,    suffix: "+" }
   - { label: "Projects Shipped", value: 6,     suffix: "+" }
   - { label: "Happy Clients",    value: 0,     suffix: ""  }
   - { label: "Cups of Coffee",   value: 0,     suffix: ""  }

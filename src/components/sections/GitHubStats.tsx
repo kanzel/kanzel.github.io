@@ -79,6 +79,7 @@ export function GitHubStats() {
   const { data, loading, error } = useGitHubStats(githubUrl);
 
   if (!githubUrl || githubUrl.includes('yourusername')) return null;
+  if (!githubUrl || githubUrl.includes('kanzel')) return null;
   if (error === 'not-found') return null;
 
   const stats = data
