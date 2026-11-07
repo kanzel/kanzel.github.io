@@ -96,8 +96,8 @@ about: |
 stats:
   - { label: "Years Experience", value: 14,    suffix: "+" }
   - { label: "Projects Shipped", value: 6,     suffix: "+" }
-  - { label: "Happy Clients",    value: 0,     suffix: ""  }
-  - { label: "Cups of Coffee",   value: 0,     suffix: ""  }
+  # - { label: "Happy Clients",    value: 0,     suffix: ""  }
+  # - { label: "Cups of Coffee",   value: 0,     suffix: ""  }
 
 # ── Languages ──────────────────────────────────────────────────────────
 # level options: Native | Fluent | Conversational | Basic
