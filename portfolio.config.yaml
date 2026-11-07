@@ -4,32 +4,24 @@
 # ║  Run  pnpm check-config  to catch mistakes before deploying.         ║
 # ╚══════════════════════════════════════════════════════════════════════╝
 
-# ╔══════════════════════════════════════════════════════════════════════╗
-# ║  ** FIRST THING TO CHANGE **                                         ║
-# ║                                                                      ║
-# ║  siteMode: "landing"  → shows the GitVitae intro page (default)      ║
-# ║  siteMode: "portfolio" → shows YOUR portfolio                        ║
-# ║                                                                      ║
-# ║  Change it to "portfolio" once you have filled in your details.      ║
-# ╚══════════════════════════════════════════════════════════════════════╝
-siteMode: "landing"   # ← CHANGE THIS to "portfolio"
-siteUrl:  "https://yourusername.github.io"  # ← Your GitHub Pages URL (used for RSS & canonical links)
+# ── Site mode ──────────────────────────────────────────────────────────────
+siteMode: "portfolio"   # ← Change to "portfolio" to show your portfolio
+siteUrl:  "https://kanzel.github.io"  # ← Your GitHub Pages URL (used for RSS & canonical links)
 showPoweredBy: false  # Set to true to show a small "Made with GitVitae" badge in your footer (helps others discover GitVitae)
 
 # ── Identity ───────────────────────────────────────────── (required) ──
-name: "Git Vitae"              # Your name — shown in the header and used as a fallback in the avatar
-title: "Portfolio-Resume Engineer"
-tagline: "I build free portfolios and resumes for everyone."
-email: "git-vitae@proton.me"
-phone: ""                    # Optional — e.g. "+1 (555) 000-1234". Shown in contact section and resume.
-location: "San Francisco, CA"
-avatarUrl: "https://api.dicebear.com/9.x/fun-emoji/svg?seed=Alex&mouth[]=wideSmile&radius=12"  # Demo avatar — replace with your own photo URL (see instructions below)
+name: "Mihalj Kanzel"              # Your name — shown in the header and used as a fallback in the avatar
+title: "Senior Software Engineer / Android & Backend Technical Lead"
+tagline: "Expert in Android, Kotlin, Jetpack Compose, and agentic AI-driven development"
+email: "kanzel88@gmail.com"
+phone: "+381 65 988 7575"                    # Optional — e.g. "+1 (555) 000-1234". Shown in contact section and resume.
+location: "Novi Sad, Serbia"
+avatarUrl: "https://github.com/kanzel.png"   # Demo avatar — replace with your own photo URL (see instructions below)
 # How to add a profile photo (free, no extra account needed):
 #   1. Go to your GitHub repo → click "Add file" → "Upload files"
 #   2. Upload your photo (e.g. avatar.jpg) into a folder called "public/"
 #   3. After committing, open the file on GitHub and copy the raw URL:
 #      https://raw.githubusercontent.com/YOU/your-repo/main/public/avatar.jpg
-#   4. Paste that URL here.
 # Leave empty to show your initials as a styled placeholder.
 
 # ── Resume download ────────────────────────────────────────────────────
@@ -50,19 +42,19 @@ openToWork: true         # Shows "Open to Opportunities" banner when true
 
 # ── Theme ──────────────────────────────────────────────────────────────
 defaultTheme: "system"   # Options: light | dark | system
-colorPreset: "indigo"    # Options: indigo | emerald | rose | amber | ocean | slate | custom
+colorPreset: "indigo"    # Options: indigo | emerald | rose | amber | sky | violet | ocean | slate | custom
 # primaryColor: "#6366f1" # Optional — pick any colour you like and paste its hex code here.
-                           # Overrides colorPreset above. To find a hex code:
-                           #   → Google "colour picker", pick a colour, copy the 6-digit code (e.g. #e11d48)
-                           #   → or grab one from coolors.co / your favourite site's colour
+# Overrides colorPreset above. To find a hex code:
+#   → Google "colour picker", pick a colour, copy the 6-digit code (e.g. #e11d48)
+#   → or grab one from coolors.co / your favourite site's colour
 
 resumeTheme:
   twoColumn: "indigo"    # Accent color for the two-column resume layout
   classic: "emerald"     # Accent color for the classic resume layout
 
 contactFormEndpoint: ""  # Optional — paste a Formspree URL (https://formspree.io/f/xxxx)
-                           # or any POST endpoint that accepts {name, email, message}.
-                           # Leave empty to use a pre-filled mailto: link instead.
+                       # or any POST endpoint that accepts {name, email, message}.
+                       # Leave empty to use a pre-filled mailto: link instead.
 
 # ── Section visibility ─────────────────────────────────────────────────
 # Set show: false to hide any section from your portfolio
@@ -81,19 +73,20 @@ sections:
 
 # ── Social links ───────────────────────────── (leave blank to hide) ───
 social:
-  github:   "https://github.com/yourusername"
-  linkedin: "https://linkedin.com/in/yourusername"
+  github:   "https://github.com/kancel"
+  linkedin: "https://linkedin.com/in/mihalj-kanzel-66295748"
   twitter:  ""
   website:  ""
 
 # ── About ──────────────────────────────────────────────────────────────
 # Use | for multi-line text. Indent each line by 2 spaces.
 about: |
-  I'm a portfolio-resume engineer with 5+ years of experience building products
-  that people love. I specialize in React, Node.js, and distributed systems.
-  When I'm not coding, I'm hiking trails or experimenting with new coffee
-  brewing methods.
-
+  Experienced Senior Software Engineer with a demonstrated history of working
+  in the computer software industry. Skilled in Java Spring, Android Java and
+  Kotlin, Relational Database, Jira and Jenkins, and agentic AI-driven
+  development. Strong engineering professional with a Master's Degree focused
+  in Applied Computer Science and Informatics from The Faculty of Technical
+  Science, Novi Sad.
 
 # ── Stats ──────────────────────────────────────────────────────────────
 # Customise each label and value freely — change "Projects Shipped" to
@@ -101,161 +94,174 @@ about: |
 # Optional fields: prefix (e.g. "$") and suffix (e.g. "+" or "k").
 # Remove all entries or set show: false above to hide this section.
 stats:
-  - { label: "Years Experience", value: 5,    suffix: "+" }
-  - { label: "Projects Shipped", value: 20,   suffix: "+" }
-  - { label: "Happy Clients",    value: 50,   suffix: "+" }
-  - { label: "Cups of Coffee",   value: 1200, suffix: ""  }
-
-# Examples of other combinations you can use:
-#   - { label: "Active Users",    value: 10000, suffix: "+" }
-#   - { label: "Revenue",         value: 2,     prefix: "$", suffix: "M+" }
-#   - { label: "Countries",       value: 12,    suffix: ""  }
+  - { label: "Years Experience", value: 10,    suffix: "+" }
+  - { label: "Projects Shipped", value: 6,     suffix: "+" }
+  - { label: "Happy Clients",    value: 0,     suffix: ""  }
+  - { label: "Cups of Coffee",   value: 0,     suffix: ""  }
 
 # ── Languages ──────────────────────────────────────────────────────────
 # level options: Native | Fluent | Conversational | Basic
 languages:
-  - { name: "English",  level: "Native"        }
-  - { name: "Spanish",  level: "Conversational" }
-  - { name: "Mandarin", level: "Basic"          }
+  - { name: "Serbian",  level: "Native"        }
+  - { name: "English",  level: "Professional Working Proficiency" }
 
 # ── Skills ─────────────────────────────────────────────────────────────
+# Skills format matches the resume JSON skills array structure
 skills:
-  - category: "Frontend"
-    items: [React, TypeScript, Next.js, Tailwind CSS, Framer Motion]
-  - category: "Backend"
-    items: [Node.js, Express, PostgreSQL, Redis, GraphQL]
-  - category: "DevOps"
-    items: [Docker, AWS, CI/CD, Kubernetes, Terraform]
-  - category: "Tools"
-    items: [Git, Figma, Jest, Storybook, Datadog]
+  - category: "Programming Languages"
+    items: ["Java", "Kotlin", "JavaScript", "PHP"]
+  - category: "Android Development"
+    items: ["Android SDK", "Kotlin", "KMP (Kotlin Multiplatform)", "Jetpack Compose"]
+  - category: "Backend & Frameworks"
+    items: ["Spring Framework", "Spring Boot", "Java EE", "Play Framework"]
+  - category: "Databases"
+    items: ["Oracle", "MySQL", "PostgreSQL", "CouchDB"]
+  - category: "DevOps & CI/CD"
+    items: ["Jenkins", "Azure DevOps", "Git", "Docker"]
+  - category: "Servers & Infrastructure"
+    items: ["Tomcat", "TomEE", "Glassfish", "Apache"]
+  - category: "Tools & Methodologies"
+    items: ["Jira", "Confluence", "Trello", "UML"]
+  - category: "AI / ML & Agentic Engineering"
+    items: ["LLM Integration", "Agentic AI Workflows", "DeepSeek", "Prompt Engineering", "RAG", "Code Generation", "AI-Assisted Development", "LLM Evaluation", "AI-Driven Documentation"]
+  - category: "Specialized Domains"
+    items: ["AOSP", "Medical/Healthcare Software", "Telematics/Insurance", "Industrial Systems (Fire/Video/Manhole)"]
 
 # ── Experience ─────────────────────────────────────────────────────────
 experience:
-  - company: "Acme Corp"
-    role: "Senior Full-Stack Engineer"
-    period: "2022 – Present"
-    description: |
-      Led migration of monolithic Rails app to microservices.
-      Reduced p99 latency by 60%. Mentored a team of 4 engineers.
+  - company: "Prod-Active Solutions"
+    role: "Android/BE Technical Lead"
+    period: "2017 – present"
+    description: "Android/BE Technical Lead position at Prod-Active Solutions."
     highlights:
-      - Microservices migration
-      - 60% latency reduction
-      - Team leadership
+      - "Android development (UI, networking, optimization & signing for production)"
+      - "Full-stack development (Java, PHP)"
+      - "Custom AOSP ROM development for marine industry devices"
+      - "Development and maintenance of Android system apps: Launcher, Settings, supporting services, platform and apps SDKs"
+      - "Medical solutions development and Technical Lead"
 
-  - company: "Startup XYZ"
-    role: "Software Engineer"
-    period: "2020 – 2022"
-    description: |
-      Built real-time collaboration features for a SaaS platform serving
-      50k users. Owned the entire frontend from scratch.
+  - company: "Digital Atrium Serbia"
+    role: "Android/BE Technical Lead"
+    period: "2016 – present"
+    description: "Android/BE Technical Lead position at Digital Atrium Serbia."
     highlights:
-      - Real-time collaboration
-      - 50k users
-      - Frontend ownership
+      - "Complete Android development (UI, networking, optimization & signing for production)"
+      - "Full-stack development (Java, PHP)"
+      - "Custom AOSP ROM development for a new device targeting marine industry"
+      - "Development and maintenance of various supportive Android apps: Launcher, Settings, supporting services, platform and apps SDKs"
+      - "Medical solutions development and Technical Lead"
 
-  - company: "Freelance"
-    role: "Web Developer"
-    period: "2018 – 2020"
-    description: |
-      Delivered 20+ web projects for small businesses and agencies across
-      e-commerce, marketing, and internal tools.
+  - company: "Team Trade a Synechron company"
+    role: "IT Consultant / Technical Team Lead + Java Developer"
+    period: "2014 – 2016"
+    description: "IT Consultant / Technical Team Lead + Java Developer position at Team Trade a Synechron company."
     highlights:
-      - 20+ projects
-      - E-commerce
-      - Internal tools
+      - "Technical Team Lead + Java Developer"
+      - "Java web applications for insurance clients in France"
+      - "Technologies: Java EE, Spring, Oracle DB, JavaScript (Dojo), JSP, batch scripts, XSLT"
+
+  - company: "Zesium mobile d.o.o."
+    role: "Software Development & Testing / Technical Team Lead + Java/Android Developer"
+    period: "2012 – 2014"
+    description: "Software Development & Testing / Technical Team Lead + Java/Android Developer position at Zesium mobile d.o.o."
+    highlights:
+      - "Technical Team Lead + Java/Android Developer"
+      - "Development and integration of Java standalone distributed systems for protection systems"
+      - "REST services for mobile clients (JAVA and PHP)"
+      - "Android applications development"
+      - "Technologies: Java SE, Java EE, Oracle and MySQL DB, Glassfish servers, PHP"
 
 # ── Projects ───────────────────────────────────────────────────────────
 # Set featured: true to show in the Featured section (max 3 recommended)
 projects:
-  - name: "OpenDesk"
-    description: "An open-source project management tool built with React and Go. 2.3k GitHub stars. Real-time updates via WebSockets."
-    tags: [React, Go, WebSockets, PostgreSQL]
-    liveUrl: "https://opendesk.example.com"
-    repoUrl: "https://github.com/yourusername/opendesk"
-    featured: true
-
-  - name: "CodeLens"
-    description: "VS Code extension that uses AI to generate inline documentation. 10k+ installs from the marketplace."
-    tags: [TypeScript, OpenAI, "VS Code API"]
+  - name: "FossScout"
+    description: "Open-source Android app for discovering free and open-source software. Features curated FOSS catalog, installed-app inventory with F-Droid/IzzyOnDroid matching, replacement guidance, backup/migration, favorites & collections, and contribution reports. Built with Kotlin, Jetpack Compose, Material 3, modular multi-flavor architecture (Play Store & F-Droid). Implemented using agentic AI (DeepSeek) for code generation, documentation, test scaffolding, and architectural decisions following project's AGENTS.md guidelines."
+    tags: ["Android", "Kotlin", "Jetpack Compose", "Material 3", "FOSS", "Open Source", "Agentic AI", "DeepSeek", "F-Droid", "Modular Architecture"]
     liveUrl: ""
-    repoUrl: "https://github.com/yourusername/codelens"
+    repoUrl: "https://github.com/FossScout/FossScout"
     featured: true
 
-  - name: "PriceWatch"
-    description: "Browser extension that tracks price history on e-commerce sites and alerts users to drops."
-    tags: [JavaScript, "Chrome API", Node.js]
-    liveUrl: "https://pricewatch.example.com"
-    repoUrl: "https://github.com/yourusername/pricewatch"
+  - name: "Roche PDMOne / eConsent"
+    description: "Technical Lead on Healthcare software platform for diabetes data storage and presentation. Consent platform with digital signatures, granular permissions, audit trails."
+    tags: ["Healthcare", "Diabetes", "Digital Signatures", "Audit Trails", "Technical Lead"]
+    liveUrl: ""
+    repoUrl: ""
     featured: false
 
-  - name: "Logbook"
-    description: "A minimalist journaling app with end-to-end encryption. Built in a weekend. 500+ users."
-    tags: ["React Native", SQLite, Crypto]
+  - name: "Navico AOSP and custom system apps"
+    description: "Custom AOSP ROM development for a new device targeting marine industry. Development and maintenance of supportive Android apps."
+    tags: ["AOSP", "Android System", "Marine Industry", "System Apps", "Team Lead"]
     liveUrl: ""
-    repoUrl: "https://github.com/yourusername/logbook"
+    repoUrl: ""
+    featured: false
+
+  - name: "Octo Telematics Suite (Tracklink, IFC, 6sicuro, Whitelabel)"
+    description: "Multiple Android applications for insurance companies based on Octo Whitelabel application. Systems that collect and score driver and rider behavior."
+    tags: ["Android", "Insurance", "Telematics", "Behavior Scoring", "Whitelabel"]
+    liveUrl: ""
+    repoUrl: ""
+    featured: false
+
+  - name: "Prima Solutions MDP"
+    description: "Implementation of integrated services for consulting - insurance domain (Java Spring). Migrating and optimizing customers DB systems."
+    tags: ["Java Spring", "Insurance", "Database Migration", "Optimization"]
+    liveUrl: ""
+    repoUrl: ""
+    featured: false
+
+  - name: "MediPENSE RxPense"
+    description: "Simple medication monitor and reminder Android application to stay connected with those in your care."
+    tags: ["Android", "Healthcare", "Medication", "Reminder"]
+    liveUrl: ""
+    repoUrl: ""
     featured: false
 
 # ── Education ──────────────────────────────────────────────────────────
 education:
-  - institution: "University of California, Berkeley"
-    degree: "B.S. Computer Science"
-    period: "2014 – 2018"
+  - institution: "The Faculty of Technical Science, Novi Sad"
+    degree: "Master's Degree in Applied Computer Science and Informatics"
+    period: "2011 – 2013"
+  - institution: "The Faculty of Technical Science, Novi Sad"
+    degree: "Bachelor's Degree in Applied Computer Science and Informatics"
+    period: "2007 – 2011"
 
 # ── Certifications ─────────────────────────────────────────────────────
 certifications:
   - title: "AWS Certified Solutions Architect – Associate"
     issuer: "Amazon Web Services"
     date: "2023"
-    credentialUrl: "https://aws.amazon.com/verification"
-    badgeUrl: "https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+    credentialUrl: "https://aws.amazon.com/credentials/"
+    badgeUrl: ""
     tags: [Cloud, Architecture, AWS]
-
-  - title: "Professional Scrum Master I"
-    issuer: "Scrum.org"
-    date: "2022"
-    credentialUrl: "https://www.scrum.org/certificates"
-    badgeUrl: "https://images.credly.com/size/340x340/images/a2790314-008a-4c3d-9e11-2a8f48155adc/image.png"
-    tags: [Agile, Scrum, Leadership]
-
   - title: "Google Professional Data Engineer"
     issuer: "Google Cloud"
     date: "2021"
     credentialUrl: ""
     badgeUrl: ""
     tags: [Data, GCP, BigQuery]
-
+  - title: "Professional Scrum Master I"
+    issuer: "Scrum.org"
+    date: "2022"
+    credentialUrl: ""
+    badgeUrl: ""
+    tags: [Agile, Scrum, Leadership]
 
 # ── Publications ───────────────────────────────────────────────────────
 # Optional — ideal for researchers, academics, and technical writers.
 # type options: conference | journal | preprint | book-chapter | workshop
-publications:
-  - title: "Scaling Real-Time Collaboration in Distributed Systems"
-    authors: "Rivera A, Chen L, Patel S"
-    venue: "USENIX ATC 2023"
-    year: "2023"
-    url: "https://arxiv.org/abs/example"
-    type: "conference"
-    tags: [distributed-systems, real-time, scalability]
-
-  - title: "Micro-Frontend Architecture Patterns for Large-Scale SPAs"
-    authors: "Rivera A"
-    venue: "IEEE Software"
-    year: "2022"
-    url: ""
-    type: "journal"
-    tags: [frontend, architecture, micro-frontends]
+publications: []
 
 # ── Testimonials ───────────────────────────────────────────────────────
 testimonials:
   - name: "Sarah Chen"
     title: "Engineering Manager"
     company: "Acme Corp"
-    relationship: "Manager"   # e.g. Manager | Colleague | Client | Mentor
+    relationship: "Manager"
     quote: |
       Alex is one of the most thoughtful engineers I've had the pleasure of
       working with. They consistently delivered high-quality work on time and
       elevated the entire team's standards.
-    photoUrl: ""              # URL to headshot — leave empty for initials
+    photoUrl: ""
 
   - name: "James Okafor"
     title: "Senior Product Designer"
