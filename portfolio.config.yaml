@@ -66,7 +66,7 @@ sections:
   - { id: experience,     show: true  }
   - { id: projects,       show: true  }
   - { id: education,      show: true  }
-  - { id: certifications, show: true  }
+  - { id: certifications, show: false }
   - { id: publications,   show: false }
   - { id: testimonials,   show: false }
   - { id: contact,        show: true  }
@@ -175,26 +175,19 @@ experience:
 # ── Projects ───────────────────────────────────────────────────────────
 # Set featured: true to show in the Featured section (max 3 recommended)
 projects:
-  - name: "FossScout"
-    description: "Open-source Android app for discovering free and open-source software. Features curated FOSS catalog, installed-app inventory with F-Droid/IzzyOnDroid matching, replacement guidance, backup/migration, favorites & collections, and contribution reports. Built with Kotlin, Jetpack Compose, Material 3, modular multi-flavor architecture (Play Store & F-Droid). Implemented using agentic AI (DeepSeek) for code generation, documentation, test scaffolding, and architectural decisions following project's AGENTS.md guidelines."
-    tags: ["Android", "Kotlin", "Jetpack Compose", "Material 3", "FOSS", "Open Source", "Agentic AI", "DeepSeek", "F-Droid", "Modular Architecture"]
-    liveUrl: ""
-    repoUrl: "https://github.com/FossScout/FossScout"
-    featured: true
-
   - name: "Roche PDMOne / eConsent"
     description: "Technical Lead on Healthcare software platform for diabetes data storage and presentation. Consent platform with digital signatures, granular permissions, audit trails."
     tags: ["Healthcare", "Diabetes", "Digital Signatures", "Audit Trails", "Technical Lead"]
     liveUrl: ""
     repoUrl: ""
-    featured: false
+    featured: true
 
   - name: "Navico AOSP and custom system apps"
     description: "Custom AOSP ROM development for a new device targeting marine industry. Development and maintenance of supportive Android apps."
     tags: ["AOSP", "Android System", "Marine Industry", "System Apps", "Team Lead"]
     liveUrl: ""
     repoUrl: ""
-    featured: false
+    featured: true
 
   - name: "Octo Telematics Suite (Tracklink, IFC, 6sicuro, Whitelabel)"
     description: "Multiple Android applications for insurance companies based on Octo Whitelabel application. Systems that collect and score driver and rider behavior."
@@ -208,6 +201,13 @@ projects:
     tags: ["Java Spring", "Insurance", "Database Migration", "Optimization"]
     liveUrl: ""
     repoUrl: ""
+    featured: false
+
+  - name: "FossScout"
+    description: "Open-source Android app for discovering free and open-source software. Features curated FOSS catalog, installed-app inventory with F-Droid/IzzyOnDroid matching, replacement guidance, backup/migration, favorites & collections, and contribution reports. Built with Kotlin, Jetpack Compose, Material 3, modular multi-flavor architecture (Play Store & F-Droid). Implemented using agentic AI (DeepSeek) for code generation, documentation, test scaffolding, and architectural decisions following project's AGENTS.md guidelines."
+    tags: ["Android", "Kotlin", "Jetpack Compose", "Material 3", "FOSS", "Open Source", "Agentic AI", "DeepSeek", "F-Droid", "Modular Architecture"]
+    liveUrl: ""
+    repoUrl: "https://github.com/FossScout/FossScout"
     featured: false
 
   - name: "MediPENSE RxPense"
