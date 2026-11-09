@@ -16,7 +16,8 @@ tagline: "Expert in Android, Kotlin, Jetpack Compose, and agentic AI-driven deve
 email: "kanzel88@gmail.com"
 phone: ""                    # Optional — e.g. "+1 (555) 000-1234". Shown in contact section and resume.
 location: "Novi Sad, Serbia"
-avatarUrl: "https://github.com/kanzel.png"   # Demo avatar — replace with your own photo URL (see instructions below)
+# avatarUrl: "https://github.com/kanzel.png"   # Demo avatar — replace with your own photo URL (see instructions below)
+avatarUrl: "https://api.dicebear.com/9.x/fun-emoji/svg?seed=Alex&mouth[]=wideSmile&radius=12"   # Demo avatar — replace with your own photo URL (see instructions below)
 # How to add a profile photo (free, no extra account needed):
 #   1. Go to your GitHub repo → click "Add file" → "Upload files"
 #   2. Upload your photo (e.g. avatar.jpg) into a folder called "public/"
@@ -109,23 +110,23 @@ languages:
 # ── Skills ─────────────────────────────────────────────────────────────
 # Skills format matches the resume JSON skills array structure
 skills:
-  - category: "Programming Languages"
+  - category: "Languages"
     items: ["Java", "Kotlin", "JavaScript", "PHP"]
-  - category: "Android Development"
+  - category: "Android"
     items: ["Android SDK", "Kotlin", "KMP (Kotlin Multiplatform)", "Jetpack Compose"]
-  - category: "Backend & Frameworks"
-    items: ["Spring Framework", "Spring Boot", "Java EE", "Play Framework"]
+  - category: "Backend"
+    items: ["Spring Framework", "Java EE", "Play Framework", "Laravel"]
   - category: "Databases"
     items: ["Oracle", "MySQL", "PostgreSQL", "CouchDB"]
-  - category: "DevOps & CI/CD"
+  - category: "DevOps"
     items: ["Jenkins", "Azure DevOps", "Git", "Docker"]
-  - category: "Servers & Infrastructure"
+  - category: "Servers"
     items: ["Tomcat", "TomEE", "Glassfish", "Apache"]
-  - category: "Tools & Methodologies"
+  - category: "Tools"
     items: ["Jira", "Confluence", "Trello", "UML"]
-  - category: "AI / ML & Agentic Engineering"
+  - category: "AI / ML"
     items: ["LLM Integration", "Agentic AI Workflows", "DeepSeek", "Prompt Engineering", "RAG", "Code Generation", "AI-Assisted Development", "LLM Evaluation", "AI-Driven Documentation"]
-  - category: "Specialized Domains"
+  - category: "Domains"
     items: ["AOSP", "Medical/Healthcare Software", "Telematics/Insurance", "Industrial Systems (Fire/Video/Manhole)"]
 
 # ── Experience ─────────────────────────────────────────────────────────
