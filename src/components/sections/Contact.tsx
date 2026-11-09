@@ -316,6 +316,7 @@ export function Contact() {
 
           <ShareModal open={shareOpen} onClose={() => setShareOpen(false)} />
 
+          {config.showPoweredBy && (
           {/* Footer credit */}
           <motion.div
             variants={fadeUp}
@@ -345,6 +346,7 @@ export function Contact() {
               What's new in v1.3
             </button>
           </motion.div>
+          )} 
 
           <ChangelogModal
             open={changelogOpen}
