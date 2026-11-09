@@ -42,6 +42,9 @@ export function Contact() {
     'Open to new opportunities. Whether you have a role in mind or just want to connect — my inbox is always open.';
 
   const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
+  const PLACEHOLDER_PHONE = "+381 00 000 0000";
+  const normalizePhone = (v: string) => v.replace(/[^\d+]/g, "");
+  const isRealPhone = !!config.phone && normalizePhone(config.phone) !== normalizePhone(PLACEHOLDER_PHONE);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -235,7 +238,7 @@ export function Contact() {
               <Mail size={15} />
               {config.email}
             </a>
-            {!config.phone && (
+            {isRealPhone && (
               <a
                 href={`tel:${config.phone.replace(/\s/g, '')}`}
                 className="border-border text-foreground hover:bg-secondary hover:border-primary/40 flex items-center gap-2.5 rounded-2xl border px-6 py-3 text-sm font-medium tracking-wide transition-all"
@@ -245,7 +248,7 @@ export function Contact() {
                 {config.phone}
               </a>
             )}
-            {config.phone && (  
+            {!isRealPhone && (  
               <button
                   type="button"
                   onClick={() => setIsPhoneModalOpen(true)}
@@ -256,7 +259,7 @@ export function Contact() {
                 {config.phone}
               </button>
             )}
-            {config.phone && (  
+            {!isRealPhone && (  
               <Dialog open={isPhoneModalOpen} onOpenChange={setIsPhoneModalOpen}>
                 <DialogContent>
                   <DialogHeader>

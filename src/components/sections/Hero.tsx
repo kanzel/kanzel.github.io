@@ -88,6 +88,9 @@ export function Hero() {
   const arrowOpacity = useTransform(scrollYProgress, [0, 0.18], [1, 0]);
   
   const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
+  const PLACEHOLDER_PHONE = "+381 00 000 0000";
+  const normalizePhone = (v: string) => v.replace(/[^\d+]/g, "");
+  const isRealPhone = !!config.phone && normalizePhone(config.phone) !== normalizePhone(PLACEHOLDER_PHONE);
 
   return (
     <section
@@ -168,7 +171,7 @@ export function Hero() {
               {config.location && config.phone && (
                 <span className="opacity-30">·</span>
               )}
-              {!config.phone && (
+              {isRealPhone && (
                 <a
                   href={`tel:${config.phone.replace(/\s/g, '')}`}
                   className="hover:text-foreground flex items-center gap-1.5 transition-colors"
@@ -177,7 +180,7 @@ export function Hero() {
                   {config.phone}
                 </a>
               )}
-              {config.phone && (
+              {!isRealPhone && (
                 <button
                   type="button"
                   onClick={() => setIsPhoneModalOpen(true)}
@@ -188,7 +191,7 @@ export function Hero() {
                 {config.phone}
               </button>
               )}
-              {config.phone && (  
+              {!isRealPhone && (  
                 <Dialog open={isPhoneModalOpen} onOpenChange={setIsPhoneModalOpen}>
                   <DialogContent>
                     <DialogHeader>
