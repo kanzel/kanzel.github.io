@@ -325,6 +325,7 @@ export function Contact() {
             viewport={{ once: true, margin: '-40px' }}
             className="border-border/60 w-full border-t pt-8 text-center"
           >
+            {config.showPoweredBy && (
             <p className="text-muted-foreground font-mono text-xs tracking-wide">
               Built with{' '}
               <a
@@ -344,6 +345,7 @@ export function Contact() {
               <Sparkles size={10} />
               What's new in v1.3
             </button>
+            )}
           </motion.div>
 
           <ChangelogModal
