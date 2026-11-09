@@ -338,6 +338,8 @@ export function Contact() {
               </a>{' '}
               &mdash; fork and make it yours.
             </p>
+            )}
+            {config.showPoweredBy && (
             <button
               onClick={() => setChangelogOpen(true)}
               className="text-muted-foreground/60 hover:text-primary no-print mt-2 inline-flex items-center gap-1.5 text-[11px] transition-colors"
