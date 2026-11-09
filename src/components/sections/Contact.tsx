@@ -35,6 +35,8 @@ export function Contact() {
     config.contactDescription ??
     'Open to new opportunities. Whether you have a role in mind or just want to connect — my inbox is always open.';
 
+  const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!name || !email || !message) return;
@@ -228,6 +230,7 @@ export function Contact() {
               {config.email}
             </a>
             {config.phone && (
+              /*
               <a
                 href={`tel:${config.phone.replace(/\s/g, '')}`}
                 className="border-border text-foreground hover:bg-secondary hover:border-primary/40 flex items-center gap-2.5 rounded-2xl border px-6 py-3 text-sm font-medium tracking-wide transition-all"
@@ -236,6 +239,27 @@ export function Contact() {
                 <Phone size={15} />
                 {config.phone}
               </a>
+              */
+              <button
+                  type="button"
+                  onClick={() => setIsPhoneModalOpen(true)}
+                  className="border-border text-foreground hover:bg-secondary hover:border-primary/40 flex items-center gap-2.5 rounded-2xl border px-6 py-3 text-sm font-medium tracking-wide transition-all"
+                  data-testid="link-contact-phone"
+              >
+                <Phone size={15} />
+                {config.phone}
+              </button>
+
+              <Dialog open={isPhoneModalOpen} onOpenChange={setIsPhoneModalOpen}>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>Phone Number Available Upon Request</DialogTitle>
+                  </DialogHeader>
+                  <p className="text-sm text-muted-foreground">
+                    Please contact via email to request the phone number.
+                  </p>
+                </DialogContent>
+              </Dialog>
             )}
           </motion.div>
 
