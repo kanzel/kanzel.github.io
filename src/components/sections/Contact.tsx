@@ -15,7 +15,12 @@ import { config } from '@/portfolio.config';
 import { ShareModal } from '@/components/ShareModal';
 import { ChangelogModal } from '@/components/ChangelogModal';
 import { fadeUpVariants } from '@/lib/animation';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 
 const fadeUp = fadeUpVariants(40, 0.75, 0.12);
 
@@ -230,8 +235,7 @@ export function Contact() {
               <Mail size={15} />
               {config.email}
             </a>
-            {config.phone && (
-              /*
+            {!config.phone && (
               <a
                 href={`tel:${config.phone.replace(/\s/g, '')}`}
                 className="border-border text-foreground hover:bg-secondary hover:border-primary/40 flex items-center gap-2.5 rounded-2xl border px-6 py-3 text-sm font-medium tracking-wide transition-all"
@@ -240,7 +244,8 @@ export function Contact() {
                 <Phone size={15} />
                 {config.phone}
               </a>
-              */
+            )}
+            {config.phone && (  
               <button
                   type="button"
                   onClick={() => setIsPhoneModalOpen(true)}
@@ -250,7 +255,8 @@ export function Contact() {
                 <Phone size={15} />
                 {config.phone}
               </button>
-
+            )}
+            {config.phone && (  
               <Dialog open={isPhoneModalOpen} onOpenChange={setIsPhoneModalOpen}>
                 <DialogContent>
                   <DialogHeader>
