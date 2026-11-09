@@ -15,6 +15,7 @@ import { config } from '@/portfolio.config';
 import { ShareModal } from '@/components/ShareModal';
 import { ChangelogModal } from '@/components/ChangelogModal';
 import { fadeUpVariants } from '@/lib/animation';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const fadeUp = fadeUpVariants(40, 0.75, 0.12);
 
