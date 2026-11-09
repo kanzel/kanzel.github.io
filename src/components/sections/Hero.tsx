@@ -3,6 +3,12 @@ import { Download, MapPin, Phone, ArrowDown } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { config } from '@/portfolio.config';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 
 function Avatar() {
   if (config.avatarUrl) {
@@ -80,6 +86,8 @@ export function Hero() {
   const gridY = useTransform(scrollYProgress, [0, 1], ['0%', '14%']);
   const blobY = useTransform(scrollYProgress, [0, 1], ['0%', '18%']);
   const arrowOpacity = useTransform(scrollYProgress, [0, 0.18], [1, 0]);
+  
+  const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
 
   return (
     <section
@@ -160,7 +168,7 @@ export function Hero() {
               {config.location && config.phone && (
                 <span className="opacity-30">·</span>
               )}
-              {config.phone && (
+              {!config.phone && (
                 <a
                   href={`tel:${config.phone.replace(/\s/g, '')}`}
                   className="hover:text-foreground flex items-center gap-1.5 transition-colors"
@@ -168,6 +176,29 @@ export function Hero() {
                   <Phone size={12} />
                   {config.phone}
                 </a>
+              )}
+              {config.phone && (
+                <button
+                  type="button"
+                  onClick={() => setIsPhoneModalOpen(true)}
+                  className="border-border text-foreground hover:bg-secondary hover:border-primary/40 flex items-center gap-2.5 rounded-2xl border px-6 py-3 text-sm font-medium tracking-wide transition-all"
+                  data-testid="link-contact-phone"
+              >
+                <Phone size={15} />
+                {config.phone}
+              </button>
+              )}
+              {config.phone && (  
+                <Dialog open={isPhoneModalOpen} onOpenChange={setIsPhoneModalOpen}>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle>Phone Number Available Upon Request</DialogTitle>
+                    </DialogHeader>
+                    <p className="text-sm text-muted-foreground">
+                      Please contact via email to request the phone number.
+                    </p>
+                  </DialogContent>
+                </Dialog>
               )}
             </p>
           )}
